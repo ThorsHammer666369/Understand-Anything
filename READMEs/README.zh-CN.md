@@ -181,7 +181,7 @@ Understand-Anything 可在多个 AI 编码平台上运行。
 /plugin install understand-anything
 ```
 
-### 一行命令安装（Codex / OpenCode / OpenClaw / Antigravity / Gemini CLI / Pi Agent / Vibe CLI / VS Code Copilot / Hermes / Cline / KIMI CLI / Nanobot）
+### 一行命令安装（Codex / OpenCode / OpenClaw / Antigravity / Gemini CLI / Pi Agent / Vibe CLI / VS Code Copilot / Hermes / Cline / KIMI CLI / Nanobot / Kiro）
 
 **macOS / Linux：**
 ```bash
@@ -197,7 +197,7 @@ iwr -useb https://raw.githubusercontent.com/Egonex-AI/Understand-Anything/main/i
 
 安装脚本会将仓库克隆到 `~/.understand-anything/repo`，并为所选平台创建相应的符号链接。安装完成后请重启 CLI 或 IDE。
 
-- 支持的 `<platform>` 取值：`gemini`、`codex`、`opencode`、`pi`、`openclaw`、`antigravity`、`vibe`、`vscode`、`hermes`、`cline`、`kimi`、`nanobot`
+- 支持的 `<platform>` 取值：`gemini`、`codex`、`opencode`、`pi`、`openclaw`、`antigravity`、`vibe`、`vscode`、`hermes`、`cline`、`kimi`、`nanobot`、`kiro`
 - 后续更新：`./install.sh --update`
 - 卸载：`./install.sh --uninstall <platform>`
 
@@ -219,6 +219,18 @@ iwr -useb https://raw.githubusercontent.com/Egonex-AI/Understand-Anything/main/i
 copilot plugin install Egonex-AI/Understand-Anything:understand-anything-plugin
 ```
 
+### Kiro CLI / IDE
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/Egonex-AI/Understand-Anything/main/install.sh | bash -s kiro
+```
+
+安装完成后：
+- **Kiro CLI**：`kiro-cli chat --agent understand "分析这个项目"`
+- **Kiro IDE**：技能会被符号链接到 `~/.kiro/skills/`，`understand` agent 会被写入 `~/.kiro/agents/understand.json`，重启 IDE 后两者均可使用。
+
+若需要在所有项目中使用（个人技能），运行上面的 `install.sh` 并选择 `kiro` 平台即可。
+
 ### 多平台兼容
 
 | 平台 | 状态 | 安装方式 |
@@ -238,6 +250,7 @@ copilot plugin install Egonex-AI/Understand-Anything:understand-anything-plugin
 | Cline | ✅ 支持 | `install.sh cline` |
 | KIMI CLI | ✅ 支持 | `install.sh kimi` |
 | Nanobot | ✅ 支持 | `install.sh nanobot` |
+| Kiro CLI / IDE | ✅ 支持 | `install.sh kiro` |
 
 ---
 

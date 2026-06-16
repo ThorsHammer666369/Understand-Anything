@@ -181,7 +181,7 @@ Understand-Anything funciona en múltiples plataformas de codificación con IA.
 /plugin install understand-anything
 ```
 
-### Instalación de una línea (Codex / OpenCode / OpenClaw / Antigravity / Gemini CLI / Pi Agent / Vibe CLI / VS Code Copilot / Hermes / Cline / KIMI CLI / Nanobot)
+### Instalación de una línea (Codex / OpenCode / OpenClaw / Antigravity / Gemini CLI / Pi Agent / Vibe CLI / VS Code Copilot / Hermes / Cline / KIMI CLI / Nanobot / Kiro)
 
 **macOS / Linux:**
 ```bash
@@ -197,7 +197,7 @@ iwr -useb https://raw.githubusercontent.com/Egonex-AI/Understand-Anything/main/i
 
 El instalador clona el repositorio en `~/.understand-anything/repo` y crea los enlaces simbólicos correspondientes para la plataforma elegida. Reinicia tu CLI/IDE al terminar.
 
-- Valores soportados de `<platform>`: `gemini`, `codex`, `opencode`, `pi`, `openclaw`, `antigravity`, `vibe`, `vscode`, `hermes`, `cline`, `kimi`, `nanobot`
+- Valores soportados de `<platform>`: `gemini`, `codex`, `opencode`, `pi`, `openclaw`, `antigravity`, `vibe`, `vscode`, `hermes`, `cline`, `kimi`, `nanobot`, `kiro`
 - Actualizar más adelante: `./install.sh --update`
 - Desinstalar: `./install.sh --uninstall <platform>`
 
@@ -219,6 +219,18 @@ Para habilidades personales (disponibles en todos los proyectos), ejecuta el `in
 copilot plugin install Egonex-AI/Understand-Anything:understand-anything-plugin
 ```
 
+### Kiro CLI / IDE
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/Egonex-AI/Understand-Anything/main/install.sh | bash -s kiro
+```
+
+Tras la instalación:
+- **Kiro CLI**: `kiro-cli chat --agent understand "Analiza este proyecto"`
+- **Kiro IDE**: Las habilidades se enlazan simbólicamente en `~/.kiro/skills/` y el agente `understand` se escribe en `~/.kiro/agents/understand.json`, de modo que ambos quedan disponibles tras reiniciar el IDE.
+
+Para habilidades personales (disponibles en todos los proyectos), ejecuta el `install.sh` de arriba con la plataforma `kiro`.
+
 ### Compatibilidad de Plataformas
 
 | Plataforma | Estado | Método de Instalación |
@@ -238,6 +250,7 @@ copilot plugin install Egonex-AI/Understand-Anything:understand-anything-plugin
 | Cline | ✅ Soportado | `install.sh cline` |
 | KIMI CLI | ✅ Soportado | `install.sh kimi` |
 | Nanobot | ✅ Soportado | `install.sh nanobot` |
+| Kiro CLI / IDE | ✅ Soportado | `install.sh kiro` |
 
 ---
 
